@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Versículo Diário</title>
+
+<style>
+body {
+  background: #0d0d0d;
+  color: white;
+  font-family: Arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,255,150,0.3);
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #00ff99;
+  color: black;
+  font-weight: bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+  <h2>📖 Versículo do Dia</h2>
+  <p id="versiculo"></p>
+  <button onclick="gerar()">Novo versículo</button>
+</div>
+
+<script>
+const versiculos = [
+"O Senhor é o meu pastor; nada me faltará. (Salmos 23:1)",
+"Tudo posso naquele que me fortalece. (Filipenses 4:13)",
+"Deus é o nosso refúgio e fortaleza. (Salmos 46:1)",
+"Entrega o teu caminho ao Senhor. (Salmos 37:5)",
+"O choro pode durar uma noite, mas a alegria vem pela manhã. (Salmos 30:5)"
+];
+
+function gerar() {
+  const sorteio = versiculos[Math.floor(Math.random() * versiculos.length)];
+  document.getElementById("versiculo").innerText = sorteio;
+}
+
+// versículo automático ao abrir
+gerar();
+</script>
+
+</body>
+</html>
